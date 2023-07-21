@@ -3,9 +3,36 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 16px;
     line-height: 1.5;
     color: #545454;
 }
+
+.theme-color {
+    color: #CF9D6C;
+}
+
+.theme-bg-color {
+    background: #CF9D6C;
+}
+
+.theme-border-color {
+    border: 1px solid #CF9D6C;
+}
+
+.theme-grey-border{
+    border:1px solid #c8c0b8;
+}
+
+.w-33 {
+    width: 33.33%;
+}
+
+@media(max-width:1400px) {
+    .w-33 {
+        width: 100%;
+    }
+}
+  

@@ -1,0 +1,116 @@
+.font-contact {
+    font-family: "Cinzel", -apple-system, BlinkMacSystemFont, Sans-serif;
+}
+
+.theme-bg-color {
+    background: #CF9D6C;
+}
+
+.bg-header {
+    background-color: #423a36;
+}
+
+.active{
+    color:#CF9D6C;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    // font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    height:auto;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    color: #CF9D6C;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    color:#CF9D6C;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.w-33 {
+    width: 33.33%;
+}
+
+.footer {
+    background-color: #423a36;
+}
+
+.footer-text {
+    color: #c8c0b8;
+}
+
+.footer-border {
+    border-left: 1px solid #c8c0b8;
+    border-right: 1px solid #c8c0b8;
+}
+
+.footer-bottom-border {
+    border-top: 1px solid #c8c0b8;
+    border-bottom: 1px solid #c8c0b8;
+}
+
+.input-group-btn .form-control {
+    background-color: #3b3430;
+    padding: 15px 25px;
+    width: 65%;
+}
+
+.submit {
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+
+input[type="email"] {
+    color: #6b6460;
+}
+
+::placeholder {
+    color: #6b6460;
+}
+.w-33 {
+    width: 33.33%;
+}
+
+@media(max-width:1400px) {
+    .w-33 {
+        width: 100%;
+    }
+    .footer-border {
+        border:none;
+    }
+}

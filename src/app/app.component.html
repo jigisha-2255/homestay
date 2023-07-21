@@ -1,1 +1,163 @@
-<router-outlet></router-outlet>
+<div class="main-container">
+    <div class="h-32 items-center justify-around mx-20 hidden lg:flex flex-row">
+        <div class="w-1/5 flex justify-center">
+            <div class="flex justify-center">
+                <div class="flex items-center justify-center border theme-border-color rounded-full mr-4 border-blue-100 h-10 w-10">
+                    <i class="fa-solid fa-house theme-color"></i>
+                </div>
+                <div>
+                    <p class="text-sm">7882 Longbranch Rd</p>
+                    <p class="text-sm mt-1">Wooster, New York</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/5 flex justify-center">
+            <div class="flex">
+                <div class="flex items-center justify-center border theme-border-color rounded-full mr-4 border-blue-100 h-10 w-10">
+                    <i class="fa fa-envelope theme-color"></i>
+                </div>
+                <div>
+                    <p class="text-sm">Email Us</p>
+                    <p class="text-sm mt-1">ami@example.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/5 flex justify-center">
+            <img src="assets/logo.svg" class="w-9/12 h-full">
+        </div>
+        <div class="w-1/5 flex justify-center">
+            <h5 class="theme-color font-bold text-2xl font-contact">
+                +(84) 4130 0555
+            </h5>
+        </div>
+        <div class="w-1/5 flex justify-center">
+            <button class="uppercase theme-bg-color text-white rounded-md text-xs font-bold py-3 px-8">Book Your stay</button>
+        </div>
+    </div>
+    <div class="h-32 w-full lg:hidden flex justify-between">
+        <div class="w-1/2 flex justify-center">
+            <img src="assets/logo.svg" class="w-9/12 h-full">
+        </div>
+        <div class="w-1/2 flex justify-end items-center mr-5">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+    <div>
+        <div class="hidden lg:flex bg-header w-100 items-center justify-center">
+            <div class="dropdown py-5">
+                <button class="dropbtn uppercase text-xs font-bold">
+                    Home
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a routerLink="home2" class="text-center text-xs">Home 2</a>
+                  <a routerLink="home3" class="text-center text-xs">Home 3</a>
+                </div>
+            </div> 
+            <div class="dropdown py-5">
+                <button class="dropbtn uppercase text-xs font-bold">
+                    About Homestay
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a routerLink="aboutUs" class="text-center text-xs">About Us</a>
+                  <a routerLink="amenities" class="text-center text-xs">Amenities</a>
+                  <a routerLink="placesToVisit" class="text-center text-xs">Places to Visit</a>
+                  <a routerLink="thingsToDo" class="text-center text-xs">Things to do</a>
+                </div>
+            </div> 
+            <div class="dropdown py-5">
+                <button class="dropbtn uppercase text-xs font-bold">
+                    Rooms
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a routerLink="hotelBookingSearch" class="text-center text- ">Hotel Booking Search</a>
+                  <a routerLink="singleRoom" class="text-center text-xs">Single Room</a>
+                </div>
+            </div> 
+            <div class="w-auto text-white uppercase text-center text-xs font-bold px-5 navbar py-5">
+                <a routerLink="gallery">Gallery</a>
+            </div>
+            <div class="w-auto text-white uppercase text-center text-xs font-bold px-5 navbar py-5">
+                <a routerLink="news" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">News</a>
+            </div>
+            <div class="dropdown py-5">
+                <button class="dropbtn uppercase text-xs font-bold">
+                    Pages
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a routerLink="team" class="text-center text-xs">Our Team</a>
+                  <a routerLink="faq" class="text-center text-xs">FAQ</a>
+                  <a routerLink="404" class="text-center text-xs">404</a>
+                </div>
+              </div> 
+            <div class="w-auto text-white uppercase text-center text-xs font-bold px-5 navbar py-5">
+                <a routerLink="contact">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="flex flex-col py-20 footer">
+        <div class="flex justify-center px-5 lg:px-20 ">
+            <img src="assets/logo-footer.png">
+        </div>
+        <div class="flex flex-col lg:flex-row py-16 px-5 lg:px-20 ">
+            <div class="flex flex-col w-33 justify-center items-center my-5 lg:my-0">
+                <h2 class="uppercase text-white my-2 font-bold">About Us</h2>
+                <div class="my-3 footer-text" *ngFor="let aboutLink of aboutUs">
+                    <a>{{aboutLink.name}}</a>
+                </div>
+            </div>
+            <div class="flex flex-col w-33 justify-center items-center footer-border my-5 lg:my-0">
+                <h2 class="uppercase text-white my-2 font-bold">Information</h2>
+                <div class="footer-text text-center" *ngFor="let info of footerInfo">
+                    <div class="my-3">
+                        <p class="text-sm">{{info.address}}</p>
+                    </div>
+                    <div class="my-3">
+                        <p class="uppercase my-6 text-xs text-white font-bold">Call For Reservations</p>
+                    </div>
+                    <div class="my-3">
+                        <p class="my-6 text-3xl theme-color">{{info.contact}}</p>
+                    </div>
+                    <div class="my-3">
+                        <p class="uppercase my-6 text-xs text-white font-bold">View Map<i class="fa fa-arrow-right ml-2 theme-color"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-33 justify-center items-center my-5 lg:my-0">
+                <h2 class="uppercase text-white my-2 font-bold">Quick Links</h2>
+                <div class="my-3 footer-text" *ngFor="let links of quickLinks">
+                    <a>{{links.name}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center lg:flex-row px-5 lg:px-20 py-5 footer-bottom-border">
+            <div class="uppercase w-33 text-center lg:text-right text-white tracking-wider my-5 lg:my-0">
+                don’t miss our latest updated
+            </div>
+            <div class="flex flex-row w-33 justify-center items-center my-5 lg:my-0">
+                <form class="input-group">
+                    <div class="input-group-btn">
+                        <input type="text" name="term" class="form-control" placeholder="Enter Your Email">
+                        <span><button type="submit" class="submit theme-bg-color text-white text-xs font-bold">SUBMIT<i class="fa-solid fa-paper-plane ml-2"></i></button></span>
+                    </div>
+                </form>
+            </div>
+            <div class="flex flex-row w-33 footer-text justify-center lg:justify-start my-5 lg:my-0">
+                <i class="fa-brands fa-facebook mr-7"></i>
+                <i class="fa-brands fa-twitter mr-7"></i>
+                <i class="fa-brands fa-instagram mr-7"></i>
+                <i class="fa-brands fa-youtube mr-7"></i>
+            </div>
+        </div>
+        <div class="flex flex-row justify-center px-5 lg:px-20">
+            <small class="mt-20 footer-text tracking-widest">Copyright © 2019. All Rights Reserved.</small>
+        </div>
+    </div>
+</div>
+
