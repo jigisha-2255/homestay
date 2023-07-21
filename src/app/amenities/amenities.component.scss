@@ -15,5 +15,16 @@
 }
 
 .about-height {
-    min-height: 800px;
+    min-height: 500px;
+}
+
+
+.w-33 {
+    width: 33.33%;
+}
+
+@media(max-width:1400px) {
+    .w-33 {
+        width: 100%;
+    }
 }

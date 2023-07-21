@@ -54,31 +54,13 @@
         <h5 class="uppercase theme-color text-sm tracking-widest my-3">TOP REASONS TO CHOOSE OUR HOMESTAY</h5>
     </div>
     <div class="flex flex-col lg:flex-row justify-between mt-10 lg:mt-20">
-        <div class="flex flex-col lg:mx-3 w-33 py-5">
+        <div class="flex flex-col lg:mx-3 w-33 py-5" *ngFor="let reason of aboutReason">
             <div class="flex flex-col justify-center items-center px-10">
                 <div class="h-20 w-20 rounded-full flex justify-center items-center icon-hover my-5">
-                    <i class="fa-solid fa-seedling text-7xl theme-color"></i>
+                    <i class="{{reason.icon}} text-7xl theme-color"></i>
                 </div>
-                <h6 class="uppercase text-lg my-2 font-bold text-hover">Live Amidst Nature</h6>
-                <p class="text-center">Feel and experience nature in its fullest glory to refresh yourself.</p>
-            </div>
-        </div>
-        <div class="flex flex-col lg:mx-3 w-33 about-border py-5">
-            <div class="flex flex-col justify-center items-center px-10">
-                <div class="h-20 w-20 rounded-full flex justify-center items-center icon-hover my-5">
-                    <i class="fa-solid fa-house text-7xl theme-color"></i>
-                </div>
-                <h6 class="uppercase text-lg my-2 font-bold text-hover">Heritage Homestay</h6>
-                <p class="text-center">Experience the charm of Kerala heritage that have been preserved throughout the ages.</p>
-            </div>
-        </div>
-        <div class="flex flex-col lg:mx-3 w-33 py-5">
-            <div class="flex flex-col justify-center items-center px-10">
-                <div class="h-20 w-20 rounded-full flex justify-center items-center icon-hover my-5">
-                    <i class="fa-solid fa-hands text-7xl theme-color"></i>
-                </div>
-                <h6 class="uppercase text-lg my-2 font-bold text-hover">Family Friendly</h6>
-                <p class="text-center">The calm and comfortable environment will make your family feel at home.</p>
+                <h6 class="uppercase text-lg my-2 font-bold text-hover">{{reason.name}}</h6>
+                <p class="text-center">{{reason.details}}</p>
             </div>
         </div>
     </div>

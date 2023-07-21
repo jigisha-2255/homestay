@@ -73,33 +73,12 @@
         <h5 class="theme-color text-sm tracking-widest my-1">EVERYTHING YOU NEED RIGHT AT HOME</h5>
     </div>
     <div class="flex flex-col lg:flex-row justify-between">
-        <div class="flex flex-col justify-center items-center py-5 lg:py-20 px-10">
+        <div class="flex flex-col justify-center items-center py-5 lg:py-20 px-5" *ngFor="let facility of facilities">
             <div class="h-16 w-16 rounded-full theme-border-color flex justify-center items-center">
-                <i class="fa fa-shield fa-2xl theme-color border "></i>
+                <i class="{{facility.icons}} fa-2xl theme-color border "></i>
             </div>
-            <h6 class="uppercase text-sm my-2 font-bold">24/7 Security</h6>
-            <p class="text-center">We take safety seriously through our dedicated team that stands watch.</p>
-        </div>
-        <div class="flex flex-col justify-center items-center py-5 lg:py-20 px-10">
-            <div class="h-16 w-16 rounded-full theme-border-color flex justify-center items-center">
-                <i class="fa fa-wifi fa-2xl theme-color border "></i>
-            </div>
-            <h6 class="uppercase text-sm my-2 font-bold">Free Wifi</h6>
-            <p class="text-center">All rooms have good high speed Wi-Fi connectivity. watch. 24/7.</p>
-        </div>
-        <div class="flex flex-col justify-center items-center py-5 lg:py-20">
-            <div class="h-16 w-16 rounded-full theme-border-color flex justify-center items-center">
-                <i class="fa fa-droplet fa-2xl theme-color border "></i>
-            </div>
-            <h6 class="uppercase text-sm my-2 font-bold">Washer Dryer</h6>
-            <p class="text-center">With three workout facilities, it's easy to stay active all year.watch. 24/7.</p>
-        </div>
-        <div class="flex flex-col justify-center items-center py-5 lg:py-20">
-            <div class="h-16 w-16 rounded-full theme-border-color flex justify-center items-center">
-                <i class="fa fa-paw fa-2xl theme-color border "></i>
-            </div>
-            <h6 class="uppercase text-sm my-2 font-bold">Animal & Pet care</h6>
-            <p class="text-center">Everyday chores made easier equals more time for living.watch. 24/7.</p>
+            <h6 class="uppercase text-sm my-2 font-bold">{{facility.name}}</h6>
+            <p class="text-center">{{facility.details}}</p>
         </div>
     </div>
 </div>
@@ -135,27 +114,13 @@
         <h5 class="theme-color text-sm tracking-widest my-1">ALL ACTIVITIES AT THE AMI HOMESTAY</h5>
     </div>
     <div class="flex flex-col lg:flex-row justify-between w-full mb-20 lg:mb-52">
-        <div class="flex flex-col justify-center items-center py-5 lg:py-20 px-10 w-33">
+        <div class="flex flex-col items-center py-5 lg:py-20 w-33" *ngFor="let things of thingsToDo">
             <div class="flex justify-center items-center">
-                <img src="assets/h1-banner03.jpg" style="height:300px;">
+                <img src="{{things.image}}" style="height:300px;">
             </div>
-            <h6 class="uppercase text-lg mt-7 font-bold">Outdoor BBQ</h6>
-            <p class="text-center px-5 my-2">Ami Homestay outdoor BBQ tour is a truly unique & interactive experience.
+            <h6 class="uppercase text-lg mt-7 font-bold">{{things.name}}</h6>
+            <p class="text-center px-5 my-2">{{things.details}}
             </p>
-        </div>
-        <div class="flex flex-col justify-center items-center py-5 lg:py-20 px-10 w-33">
-            <div class="flex justify-center items-center">
-                <img src="assets/h1-banner04.jpg" style="height:300px;">
-            </div>
-            <h6 class="uppercase text-lg mt-7 font-bold">Nature Walk</h6>
-            <p class="text-center px-5 my-2">Stroll around and fill your lungs with pure oxygen.</p>
-        </div>
-        <div class="flex flex-col justify-center items-center py-5 lg:py-20 px-10 w-33">
-            <div class="flex justify-center items-center">
-                <img src="assets/h1-banner05.jpg" style="height:300px;">
-            </div>
-            <h6 class="uppercase text-lg mt-7 font-bold">Lake Swimming</h6>
-            <p class="text-center px-5 my-2">The water is very clean, fresh and safe, best for your health.</p>
         </div>
     </div>
 </div>

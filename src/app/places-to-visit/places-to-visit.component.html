@@ -1,1 +1,74 @@
-<p>places-to-visit works!</p>
+<div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:100%;">
+    <div class="w-full flex flex-col justify-center items-center backdrop-brightness-50" style="height:400px;">
+        <h1 class="uppercase text-white w-1/2 lg:text-6xl text-2xl my-2 text-center">Places to Visit</h1>
+        <h5 class="uppercase text-white text-sm my-2 tracking-widest">AMI HOMESTAY > ABOUT US</h5>
+    </div>
+</div>
+<div class="flex flex-col px-5 sm:px-20 py-20 justify-center">
+    <div class="text-center">
+        <h1 class="uppercase font-normal text-2xl lg:text-5xl tracking-wider my-1 sm:px-80">Tourist places near by Ami Homestay</h1>
+        <h5 class="uppercase theme-color text-sm tracking-widest my-3">WHAT WE OFFER AT HOMESTAY</h5>
+        <p class="sm:px-80 py-10">There are many exciting places to visit in Cascada. The entire region is a tourist heaven. And our homestay serves as a gateway to all these interesting hotspots.
+        </p>
+    </div>
+    <div class="flex flex-row justify-center">
+        <img src="assets/place02.png">
+    </div>
+</div>
+
+<div class="flex flex-col px-5 lg:px-20 justify-center">
+    <div class="text-center">
+        <h1 class="uppercase font-normal text-2xl sm:text-5xl tracking-widest my-1">Entertainment</h1>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-between w-full mb-20">
+        <div class="flex flex-col justify-center py-5 lg:py-20 sm:px-10 w-33" *ngFor="let entertainment of entertainments">
+            <div class="flex justify-center items-center">
+                <img src="{{entertainment.image}}" style="height:400px; width:100%;">
+            </div>
+            <h6 class="uppercase text-md mt-7">DISTANCE - 
+                <span class="theme-color">{{entertainment.distance}}KMS</span>
+            </h6>
+            <h6 class="uppercase text-lg font-bold">{{entertainment.name}}</h6>
+            <p class="my-2">{{entertainment.details}}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="flex flex-col px-5 lg:px-20 justify-center">
+    <div class="text-center">
+        <h1 class="uppercase font-normal text-2xl sm:text-5xl tracking-widest my-1">Tourist places</h1>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-between w-full mb-20">
+        <div class="flex flex-col justify-center py-5 lg:py-20 sm:px-10 w-33" *ngFor="let place of places">
+            <div class="flex justify-center items-center">
+                <img src="{{place.image}}" style="height:400px; width:100%;">
+            </div>
+            <h6 class="uppercase text-md mt-7">DISTANCE - 
+                <span class="theme-color">{{place.distance}}KMS</span>
+            </h6>
+            <h6 class="uppercase text-lg font-bold">{{place.name}}</h6>
+            <p class="my-2">{{place.details}}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="flex flex-col px-5 lg:px-20 justify-center">
+    <div class="text-center">
+        <h1 class="uppercase font-normal text-2xl sm:text-5xl tracking-widest my-1">Landmarks</h1>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-between w-full mb-20">
+        <div class="flex flex-col justify-center py-5 lg:py-20 sm:px-10 w-33" *ngFor="let landmark of landmarks">
+            <div class="flex justify-center items-center">
+                <img src="{{landmark.image}}" style="height:400px; width:100%;">
+            </div>
+            <h6 class="uppercase text-md mt-7">DISTANCE - 
+                <span class="theme-color">{{landmark.distance}}KMS</span>
+            </h6>
+            <h6 class="uppercase text-lg font-bold">{{landmark.name}}</h6>
+            <p class="my-2">{{landmark.details}}
+            </p>
+        </div>
+    </div>
+</div>

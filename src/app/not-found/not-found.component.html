@@ -1,1 +1,11 @@
-<p>not-found works!</p>
+<div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:650px">
+    <div class="w-full flex flex-col justify-center items-center backdrop-brightness-50" style="height:650px;">
+        <h1 class="uppercase text-white w-10/12 lg:text-5xl text-2xl my-2 text-center">It looks like you’re lost...</h1>
+        <h1 class="uppercase text-white sm:text-9xl text-2xl my-4 tracking-widest theme-color">404</h1>
+        <h5 class="text-white text-md my-2 w-2/4 text-center">Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h5>
+        <div class="flex flex-row">
+            <button (click)="goBackToPrevPage()" class="uppercase theme-bg-color text-white rounded-md text-xs mx-2 font-bold py-4 px-10 mt-5">Go Back</button>
+            <button routerLink="/" class="uppercase theme-bg-dark-color text-white rounded-md text-xs mx-2 font-bold py-4 px-10 mt-5">Homepage</button>
+        </div>  
+    </div>
+</div>

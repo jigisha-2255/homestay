@@ -1,1 +1,63 @@
-<p>team works!</p>
+<div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:100%;">
+    <div class="w-full flex flex-col justify-center items-center backdrop-brightness-50" style="height:400px;">
+        <h1 class="uppercase text-white w-10/12 lg:text-6xl text-2xl my-2 text-center">Our Team</h1>
+        <h5 class="uppercase text-white text-sm my-2 tracking-widest">AMI HOMESTAY</h5>
+    </div>
+</div>
+
+<div class="flex flex-col lg:flex-row px-5 lg:px-20 my-40 about-height">
+    <div class="relative lg:w-1/2 w-full flex flex-col justify-center">
+        <img src="assets/ourteam01.jpg" class="w-full h-auto">
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center px-7 lg:px-20 py-20 lg:py-0">
+        <div class="my-2">
+            <h5 class="uppercase text-4xl tracking-wider text-black my-1 w-3/4">Stay with us, feel at home</h5>
+        </div>
+        <p class="my-2">
+            This relaxing and serene home stay is run by a Catholic family in a Centuries old Dutch building. It is centrally located on Princes street – one of the earliest streets laid out in Fort Cochin, beside the many shops, the Cozy streets, cafe’s and restaurant’s which are convinctly located near by. In this family run home stay, we pride ourselves on a high standard of friendly cheerful service which cafers to the needs of the whole family.
+        </p>
+        <div class="my-2">
+            <img src="assets/ourteam02.png">
+            <h5 class="uppercase text-lg tracking-widest my-3">Richard Hilton</h5>
+            <h5 class="uppercase text-sm tracking-widest my-3 light-text">AMI HOMESTAY OWNER</h5>
+        </div>
+    </div>
+</div>
+<div class="flex flex-col px-5 lg:px-20 justify-center">
+    <div class="text-center">
+        <h1 class="uppercase font-normal text-5xl tracking-widest my-1">Meet awesome people</h1>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-between w-full my-10">
+        <div class="flex flex-col justify-center items-center py-5 lg:py-20 w-33" *ngFor="let people of awesomePeople">
+            <div class="flex justify-center items-center">
+                <img src="{{people.image}}" style="height:300px;">
+            </div>
+            <h6 class="uppercase text-lg text-black mt-7 font-bold text-hover">{{people.name}}</h6>
+            <h6 class="uppercase text-xs">{{people.designation}}</h6>
+            <p class="text-center px-5 my-5">{{people.details}}
+            </p>
+            <div class="flex flex-row w-33 footer-text justify-center lg:justify-start my-5 lg:my-0">
+                <i class="fa-brands fa-facebook mx-1 p-2 text-white bg-dark icon-hover"></i>
+                <i class="fa-brands fa-twitter mx-1 p-2 text-white bg-dark icon-hover"></i>
+                <i class="fa-brands fa-youtube mx-1 p-2 text-white bg-dark icon-hover"></i>
+                <i class="fa-brands fa-pinterest mx-1 p-2 text-white bg-dark icon-hover"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="flex flex-col lg:flex-row about-height">
+    <div class="relative lg:w-1/2 w-full flex flex-col justify-center">
+        <img src="assets/ourteam06.jpg" class="w-full h-auto">
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center px-7 lg:px-20 py-20 lg:py-0 team-bg">
+        <div class="my-4">
+            <h5 class="uppercase text-4xl tracking-wider text-black my-1 w-3/4">Best amenities at the best price</h5>
+        </div>
+        <p class="my-4">
+            We pride ourselves on a high standard of friendly cheerful service which cafers to the needs of the whole family.
+        </p>
+        <p class="my-4">
+            Our cottage is designed with you in mind. We’ve tailored each room, our hospitality and amenities to make your stay as enjoyable and relaxing as possible. We hope that our attention to detail and desire to pamper you shines through each and every moment of your stay.
+        </p>
+    </div>
+</div>

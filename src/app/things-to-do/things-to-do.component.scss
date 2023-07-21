@@ -1,0 +1,20 @@
+ul li {
+    list-style-type:disc;
+}
+
+.text-hover:hover{
+    color:#CF9D6C;
+}
+
+.things-bg{
+    background:#fff;
+    box-shadow: 2px 0 20px 0 rgba(0,0,0,.1);
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+}
+
+.things3-bg{
+    background:#423a36; 
+    color:#fff;
+    box-shadow: 2px 0 20px 0 rgba(0,0,0,.1);
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+}
