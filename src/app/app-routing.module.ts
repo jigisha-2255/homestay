@@ -14,7 +14,7 @@ import { ThingsToDoComponent } from './things-to-do/things-to-do.component';
 import { HotelBookingSearchComponent } from './hotel-booking-search/hotel-booking-search.component';
 import { SingleRoomComponent } from './single-room/single-room.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { NewsComponent } from './news/news.component';
+import { NewsModule } from './news/news.module';
 
 const routes: Routes = [
   {
@@ -64,7 +64,7 @@ const routes: Routes = [
   },
   {
     path:'news',
-    component:NewsComponent
+    loadChildren: () => import('./news/news.module').then((m) => m.NewsModule),
   },
   {
     path:'team',

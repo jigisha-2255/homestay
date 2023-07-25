@@ -81,31 +81,100 @@
             <p class="text-center">{{facility.details}}</p>
         </div>
     </div>
-</div>
-<div class="flex flex-row px-5 lg:px-20 py-32 justify-between items-center">
-    <i class="fa fa-arrow-left hidden lg:flex"></i>
-    <div class="flex flex-col justify-center lg:w-3/4 lg:px-20 my-2">
-        <div class="text-center my-5">
-            <i class="fa fa-star theme-color"></i>
-            <i class="fa fa-star theme-color"></i>
-            <i class="fa fa-star theme-color"></i>
-            <i class="fa fa-star theme-color"></i>
-            <i class="fa fa-star theme-color"></i>
+</div> 
+<div id="indicators-carousel" class="relative w-full px-5 lg:px-20 mb-28  overflow-hidden" data-carousel="static">
+    <div class="flex overflow-hidden rounded-lg w-auto py-32 justify-center items-center" style="height:550px">
+        <div class="hidden duration-700 ease-in-out" style="height:550px; display: flex; justify-content: center; align-items: center;" data-carousel-item="active">
+            <div class="flex flex-col justify-center items-center lg:w-3/4 lg:px-20 my-2 sm:mx-20">
+                <div class="text-center my-5">
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                </div>
+                <div class="uppercase text-center text-2xl tracking-widest">
+                    "If You are a Lover of nature and appreciate its tranquility then this is the place for you."
+                </div>
+                <div class="flex justify-center my-5">
+                    <img src="assets/testimonials01.jpg" class="h-20 w-20 rounded-full">
+                </div>
+                <div class="flex justify-center">
+                    <h2 class="uppercase text-md font-bold">Prahalad Atreyya</h2>
+                </div>
+                <div class="flex justify-center my-1">
+                    <h6 class="uppercase text-sm theme-color">Trip Advisor</h6>
+                </div>
+            </div>
         </div>
-        <div class="uppercase text-center text-2xl tracking-widest">
-            "If You are a Lover of nature and appreciate its tranquility then this is the place for you."
+        <div class="hidden duration-700 ease-in-out" style="height:550px; display: flex; justify-content: center; align-items: center;" data-carousel-item>
+            <div class="flex flex-col justify-center items-center lg:w-3/4 lg:px-20 my-2 sm:mx-20">
+                <div class="text-center my-5">
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                </div>
+                <div class="uppercase text-center text-2xl tracking-widest">
+                    "If You are a Lover of nature and appreciate its tranquility then this is the place for you."
+                </div>
+                <div class="flex justify-center my-5">
+                    <img src="assets/testimonials01.jpg" class="h-20 w-20 rounded-full">
+                </div>
+                <div class="flex justify-center">
+                    <h2 class="uppercase text-md font-bold">Prahalad Atreyya</h2>
+                </div>
+                <div class="flex justify-center my-1">
+                    <h6 class="uppercase text-sm theme-color">Trip Advisor</h6>
+                </div>
+            </div>
         </div>
-        <div class="flex justify-center my-5">
-            <img src="assets/testimonials01.jpg" class="h-20 w-20 rounded-full">
-        </div>
-        <div class="flex justify-center">
-            <h2 class="uppercase text-md font-bold">Prahalad Atreyya</h2>
-        </div>
-        <div class="flex justify-center my-1">
-            <h6 class="uppercase text-sm theme-color">Trip Advisor</h6>
+        <div class="hidden duration-700 ease-in-out" style="height:550px; display: flex; justify-content: center; align-items: center;" data-carousel-item>
+            <div class="flex flex-col justify-center items-center lg:w-3/4 lg:px-20 my-2 sm:mx-20">
+                <div class="text-center my-5">
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                    <i class="fa fa-star theme-color"></i>
+                </div>
+                <div class="uppercase text-center text-2xl tracking-widest">
+                    "If You are a Lover of nature and appreciate its tranquility then this is the place for you."
+                </div>
+                <div class="flex justify-center my-5">
+                    <img src="assets/testimonials01.jpg" class="h-20 w-20 rounded-full">
+                </div>
+                <div class="flex justify-center">
+                    <h2 class="uppercase text-md font-bold">Prahalad Atreyya</h2>
+                </div>
+                <div class="flex justify-center my-1">
+                    <h6 class="uppercase text-sm theme-color">Trip Advisor</h6>
+                </div>
+            </div>
         </div>
     </div>
-    <i class="fa fa-arrow-right hidden lg:flex"></i>
+    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+        <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+    </div>
+    <button type="button" class="absolute top-0 left-0 sm:left-20 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full btn-hover">
+            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 right-0 sm:right-20 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full btn-hover">
+            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
 </div>
 <div class="flex flex-col px-5 lg:px-20 py-32 about-bg-color justify-center"
     style="background-image:url('assets/h1-bg01.jpg'); background-position: bottom; background-repeat: no-repeat;">
@@ -129,7 +198,115 @@
         <h1 class="uppercase font-normal text-2xl lg:text-5xl tracking-widest my-1 text-white">Accommodation</h1>
         <h5 class="theme-color text-sm tracking-widest my-3">CHOOSE FROM A WIDE RANGE OF ROOMS</h5>
     </div>
-    <div class="flex flex-col lg:flex-row justify-between w-full">
+    <div id="indicators-carousel" class="relative w-full overflow-hidden" data-carousel="static">
+        <div class="relative overflow-hidden rounded-lg w-auto accommodation-height">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                <div class="flex flex-row">
+                    <div class="flex flex-col lg:flex-row justify-between w-full">
+                        <div
+                            class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                            <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:500px;">
+                                <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:500px;">
+                                    <span class="text-white text-2xl w-1/2 text-center mb-8">DOUBLE ROOM</span>
+                                </div>
+                            </div>
+                            <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$75.9</span> Night</h6>
+                            <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
+                                    class="fa fa-arrow-right"></i></p>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                            <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center" style="height:500px">
+                                <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:500px;">
+                                    <span class="text-white text-2xl w-1/2 text-center mb-8">LUXURY ROOM</span>
+                                </div>
+                            </div>
+                            <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$64.9</span> Night</h6>
+                            <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
+                                    class="fa fa-arrow-right"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" style="height:550px"  data-carousel-item>
+                <div class="flex flex-row">
+                    <div class="flex flex-col lg:flex-row justify-between" style="width:100vw;">
+                        <div
+                            class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                            <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:500px;">
+                                <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:500px;">
+                                    <span class="text-white text-2xl w-1/2 text-center mb-8">PREMIUM ROOM</span>
+                                </div>
+                            </div>
+                            <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$53.9</span> Night</h6>
+                            <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
+                                    class="fa fa-arrow-right"></i></p>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                            <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center" style="height:500px;">
+                                <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:500px;">
+                                    <span class="text-white text-2xl w-1/2 text-center mb-8">CLASSIC ROOM</span>
+                                </div>
+                            </div>
+                            <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$60.5</span> Night</h6>
+                            <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
+                                    class="fa fa-arrow-right"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out " style="height:550px"  data-carousel-item>
+                <div class="flex flex-row">
+                    <div class="flex flex-col lg:flex-row justify-between w-full">
+                        <div
+                            class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                            <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:100%;">
+                                <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:300px;">
+                                    <span class="text-white text-2xl w-1/2 text-center mb-8">CLASSIC ROOM</span>
+                                </div>
+                            </div>
+                            <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$60.5</span> Night</h6>
+                            <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
+                                    class="fa fa-arrow-right"></i></p>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                            <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center" style="height:100%;">
+                                <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:300px;">
+                                    <span class="text-white text-2xl w-1/2 text-center mb-8">BUDGET ROOM</span>
+                                </div>
+                            </div>
+                            <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$49.5</span> Night</h6>
+                            <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
+                                    class="fa fa-arrow-right"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        </div>
+        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    <!-- <div class="flex flex-col lg:flex-row justify-between w-full">
         <div
             class="flex flex-col justify-center items-center my-5 lg:my-20 lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
             <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:100%;">
@@ -152,7 +329,7 @@
             <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
                     class="fa fa-arrow-right"></i></p>
         </div>
-    </div>
+    </div> -->
 </div>
 <div class="flex flex-col py-10 justify-center">
     <div class="text-center">

@@ -92,6 +92,6 @@ export class AmenitiesComponent implements OnInit {
       name:'07. On-line availability and booking system',
       details:'Located at the foothills of the beautiful Kemmanagundi mountains and surrounded by rolling farmlands, our entire campus is filled with hundreds of species of ferns, fruits, flowers, plants & trees. We recreated a lush tropical garden so that you and your loved ones can relax & refresh in the midst of pristine nature & birdsongs.'
     },
-]
+  ]
 
 }

@@ -1,0 +1,21 @@
+<div *ngFor="let ads of advertising" class="flex flex-col sm:px-10">
+    <div class="flex flex-col w-full px-10">
+        <div class="flex flex-col">
+            <img src="{{ads.image}}">
+            <div class="flex flex-col justify-center post-border my-8">
+                <small class="text-xs">
+                    <span class="theme-color">
+                        {{ads.category}}
+                    </span>
+                    | August 6,2019
+                </small>
+                <h2 class="my-5 font-bold text-3xl text-black text-hover">{{ads.heading}}</h2>
+                <p>
+                {{ads.details}}
+                </p>
+                <button class="w-40 uppercase theme-bg-color text-white rounded-md text-xs font-bold py-2 px-8 mt-5">Read
+                    More<i class="fa fa-arrow-right ml-2"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

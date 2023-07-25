@@ -4,3 +4,43 @@
         <h5 class="uppercase text-white text-sm my-2 tracking-widest">AMI HOMESTAY</h5>
     </div>
 </div>
+
+<div class="flex flex-col sm:flex-row px-5 sm:px-20 my-20 w-full">
+    <div class="w-full sm:w-3/4">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="flex flex-col w-full sm:w-1/4 relative">
+        <div class="flex flex-row p-10 w-full box-border">
+            <input type="search" placeholder="Search..." class="w-full tags-border">
+            <i class="fa fa-search search-icon"></i>
+        </div>
+        <div class="flex flex-col p-10 w-full my-7 box-border">
+            <h5 class="uppercase text-lg font-bold tracking-widest my-3 text-black">Blog Categoires</h5>
+            <ul class="pl-5">
+                <li class="text-hover my-3" *ngFor="let category of blogCategories">
+                    <span class="text-black text-sm">{{category.name}}</span>
+                </li>
+            </ul>
+        </div> 
+        <div class="flex flex-col pl-10 py-10 w-full my-7 box-border">
+            <h5 class="uppercase text-lg font-bold tracking-widest my-3 text-black">Recent Posts</h5>
+            <div class="flex flex-row items-center" *ngFor="let post of recentPosts">
+                <div class="w-1/4">
+                    <img src="{{post.image}}" style="height:80px; width:100px;">
+                </div>
+                <div class="flex flex-col px-5 w-3/4 my-4">
+                    <h3 class="uppercase text-black text-hover text-sm">
+                        {{post.heading}}
+                    </h3>
+                    <small class="my-2">{{post.date}}</small>
+                </div>
+            </div>
+        </div> 
+        <div class="flex flex-col p-10 w-full my-7 box-border">
+            <h5 class="uppercase text-lg font-bold tracking-widest my-3 text-black">Tags</h5>
+            <div class="flex flex-wrap">
+                <a class="py-1 px-4 m-1 rounded-md text-sm tags-border tag-hover" *ngFor="let tag of tags" routerLink="{{tag.link}}">{{tag.name}}</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+ul li {
+    list-style-type:disc;
+    color: black;
+}
+.readMoreBtn{
+    background:#faf6f1;
+    padding:15px;
+}
+.btn-hover:hover{
+    background-color:#CF9D6C;
+    color:whitesmoke;
+}
+.text-hover:hover{
+    color:#CF9D6C;
+}
+.readMoreBorder{
+    border-bottom: 1px solid lightgray;
+}
+
+input[type="text"],textarea{
+    border:1px solid lightgray;
+    border-radius:5px;
+}
+::placeholder {
+    color: #6b6460;
+}
