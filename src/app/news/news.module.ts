@@ -10,6 +10,7 @@ import { TemplateComponent } from './template/template.component';
 import { ResponsiveComponent } from './responsive/responsive.component';
 import { WordpressComponent } from './wordpress/wordpress.component';
 import { ReadMoreComponent } from './read-more/read-more.component';
+import { HotelRoomsComponent } from './hotel-rooms/hotel-rooms.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ReadMoreComponent } from './read-more/read-more.component';
     TemplateComponent,
     ResponsiveComponent,
     WordpressComponent,
-    ReadMoreComponent
+    ReadMoreComponent,
+    HotelRoomsComponent
   ],
   imports: [
     CommonModule,

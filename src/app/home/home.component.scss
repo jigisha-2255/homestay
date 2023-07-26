@@ -68,25 +68,28 @@ input[type="email"] {
   color: #6b6460;
 }
 
-.btn-hover{
-  background-color:lightgray;
+.btn-hover {
+  background-color: lightgray;
 }
-.btn-hover:hover{
-  background-color:#CF9D6C;
+
+.btn-hover:hover {
+  background-color: #CF9D6C;
 }
 
 .w-33 {
   width: 33.33%;
 }
-.accommodation-height{
-  height:750px;
+
+.accommodation-height {
+  height: 750px;
 }
 
 @media(max-width:1400px) {
   .w-33 {
-      width: 100%;
+    width: 100%;
   }
-  .accommodation-height{
-    min-height:1500px;
+
+  .accommodation-height {
+    min-height: 1500px;
   }
 }

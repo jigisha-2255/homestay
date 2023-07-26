@@ -1,0 +1,83 @@
+.about-height {
+    height: 690px;
+}
+
+.activity-height {
+    height: 690px;
+}
+
+.theme-bg {
+    background-color: #CF9D6C;
+}
+
+.theme-color {
+    color: #CF9D6C;
+}
+
+.btn-hover {
+    background-color: lightgray;
+}
+
+.btn-hover:hover {
+    background-color: #CF9D6C;
+}
+
+.box-shadow {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .08);
+}
+
+.post-border {
+    border: 5px solid #e9e9e9;
+}
+.places-bg{
+    background-color:#faf6f1 ;
+}
+.team-bg{
+    background-color:#faf6f1;
+}
+.banner-height{
+    height:600px;
+}
+.w-about2{
+    width:42.7%;
+}
+.left-about3{
+    left:56.5%;
+}
+.left-about5{
+    left:56.6%
+}
+.img-height{
+    height:600px;
+}
+.accommodation-bg-color {
+    background-image: linear-gradient(to bottom, #423a36 67.2%, #fff 30%);
+}
+.accommodation-height {
+    height: 750px;
+}
+@media(max-width:1400px){
+    .about-height {
+        height: 1250px;
+    }
+    
+    .activity-height {
+        height: 1000px;
+    }
+
+    .banner-height{
+        height:350px;
+    }
+    .w-about2{
+        width:100%;
+    }
+    .left-about3{
+        left:0%;
+    }
+    .left-about5{
+        left:0%;
+    }
+    .img-height{
+        height:1200px;
+    }
+}

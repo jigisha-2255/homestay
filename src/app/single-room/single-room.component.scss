@@ -18,7 +18,41 @@ input[type="date"],select{
 .btn-hover:hover{
     background-color:#CF9D6C;
 }
-
+ul.additionalInfo li {
+    list-style-type:disc;
+    color: black;
+}
 .box-shadow {
     box-shadow: 0 3px 20px rgba(0, 0, 0, .08);
+}
+input[type="text"],textarea{
+    border:1px solid lightgray;
+    border-radius:5px;
+}
+::placeholder {
+    color: #6b6460;
+}
+.border-bottom{
+    border-bottom: 1px solid lightgray;
+}
+.border-top{
+    border-top:1px solid lightgray;
+}
+.roomsHeight{
+    height:550px;
+}
+.modal-border{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+}
+.modal-open { 
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+}
+@media(max-width:1400px){
+    .roomsHeight{
+        height:1050px;
+    }
 }

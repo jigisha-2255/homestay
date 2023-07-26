@@ -5,114 +5,86 @@
     </div>
 </div>
 <div class="flex flex-col sm:flex-row px-5 sm:px-20 my-20 w-full">
-    <div class="w-full sm:w-3/4 px-10">
-        <div class="flex flex-row justify-between">
+    <div class="w-full sm:w-3/4 sm:px-10">
+        <div class="flex flex-col sm:flex-row justify-between">
             <div>
-                From 
+                From
                 <span class="text-4xl theme-color font-bold">
-                    $64.9 
+                    $64.9
                 </span>
                 <span class="theme-color font-bold">
                     / Night
                 </span>
             </div>
             <div>
-                <button class="uppercase theme-bg-color text-white rounded-md text-xs font-bold py-5 px-10">Check Availability this room</button>
+                <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="uppercase theme-bg-color text-white rounded-md text-xs font-bold py-5 px-10" type="button">
+                    Check Availability this room
+              </button>
             </div>
+            
+
+  
+  <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+      <div class="relative w-full max-w-2xl max-h-full">
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 pb-2 px-2">
+              <div class="flex items-center justify-center p-4 rounded-t">
+                  <h3 class="uppercase text-4xl text-gray-900 dark:text-white">
+                      Single Room
+                  </h3>
+              </div>
+              <p class="p-3 text-center">Please set arrival date and departure date before check available.</p>
+              <div class="flex flex-col sm:flex-row w-full modal-border my-2">
+                <div class="w-3/4 sm:w-1/4 flex flex-col mx-5">
+                    <input type="text" class="my-5" placeholder="Arrival Date">
+                </div>
+                <div class="w-3/4 sm:w-1/4  flex flex-col mx-5">
+                    <input type="text" class="my-5" placeholder="Departure Date">
+                </div>
+                <div class="flex flex-row items-center">
+                    <button class="uppercase theme-bg-color text-white rounded-md text-xs font-bold mx-5 py-3 px-7">Check Available</button>
+                </div>
+            </div>
+            
+              <!-- <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                  <button data-modal-hide="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
+                  <button data-modal-hide="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+              </div> -->
+          </div>
+      </div>
+  </div>
+  
         </div>
-        <div class="flex flex-col">
-            <h2 class="uppercase text-3xl my-10">Other Rooms</h2>
+
+        <div class="my-14">
             <div id="indicators-carousel" class="relative w-full" data-carousel="static">
-                <div class="relative overflow-hidden rounded-lg w-auto" style="height:550px">
-                    <div class="hidden duration-700 ease-in-out  bg-white" style="height:550px" data-carousel-item="active">
-                        <div class="flex flex-row">
-                            <div class="flex flex-col lg:flex-row justify-between w-full">
-                                <div
-                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
-                                    <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:100%;">
-                                        <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:300px;">
-                                            <span class="text-white text-2xl w-1/2 text-center mb-8">DOUBLE ROOM</span>
-                                        </div>
-                                    </div>
-                                    <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$75.9</span> Night</h6>
-                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
-                                            class="fa fa-arrow-right"></i></p>
-                                </div>
-                                <div
-                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
-                                    <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center" style="height:100%;">
-                                        <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:300px;">
-                                            <span class="text-white text-2xl w-1/2 text-center mb-8">LUXURY ROOM</span>
-                                        </div>
-                                    </div>
-                                    <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$64.9</span> Night</h6>
-                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
-                                            class="fa fa-arrow-right"></i></p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="relative overflow-hidden rounded-lg w-auto roomsHeight">
+                    <div class="hidden duration-700 ease-in-out  bg-white" data-carousel-item="active">
+                        <img src="assets/room-001.jpg">
                     </div>
-                    <div class="hidden duration-700 ease-in-out bg-white" style="height:550px"  data-carousel-item>
-                        <div class="flex flex-row">
-                            <div class="flex flex-col lg:flex-row justify-between w-full">
-                                <div
-                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
-                                    <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:100%;">
-                                        <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:300px;">
-                                            <span class="text-white text-2xl w-1/2 text-center mb-8">PREMIUM ROOM</span>
-                                        </div>
-                                    </div>
-                                    <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$53.9</span> Night</h6>
-                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
-                                            class="fa fa-arrow-right"></i></p>
-                                </div>
-                                <div
-                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
-                                    <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center" style="height:100%;">
-                                        <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:300px;">
-                                            <span class="text-white text-2xl w-1/2 text-center mb-8">CLASSIC ROOM</span>
-                                        </div>
-                                    </div>
-                                    <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$60.5</span> Night</h6>
-                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
-                                            class="fa fa-arrow-right"></i></p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="hidden duration-700 ease-in-out bg-white" style="height:550px" data-carousel-item>
+                        <img src="assets/room-002.jpg">
                     </div>
-                    <div class="hidden duration-700 ease-in-out bg-white" style="height:550px"  data-carousel-item>
-                        <div class="flex flex-row">
-                            <div class="flex flex-col lg:flex-row justify-between w-full">
-                                <div
-                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
-                                    <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:100%;">
-                                        <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:300px;">
-                                            <span class="text-white text-2xl w-1/2 text-center mb-8">CLASSIC ROOM</span>
-                                        </div>
-                                    </div>
-                                    <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$60.5</span> Night</h6>
-                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
-                                            class="fa fa-arrow-right"></i></p>
-                                </div>
-                                <div
-                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
-                                    <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center" style="height:100%;">
-                                        <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:300px;">
-                                            <span class="text-white text-2xl w-1/2 text-center mb-8">BUDGET ROOM</span>
-                                        </div>
-                                    </div>
-                                    <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">$49.5</span> Night</h6>
-                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View Detail <i
-                                            class="fa fa-arrow-right"></i></p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="hidden duration-700 ease-in-out bg-white" style="height:550px" data-carousel-item>
+                        <img src="assets/room-003.jpg">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out bg-white" style="height:550px" data-carousel-item>
+                        <img src="assets/room-004.jpg">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out bg-white" style="height:550px" data-carousel-item>
+                        <img src="assets/room-005.jpg">
                     </div>
                 </div>
                 <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="true"
+                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false"
+                        aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false"
+                        aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false"
+                    aria-label="Slide 3" data-carousel-slide-to="3"></button>
+                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false"
+                    aria-label="Slide 3" data-carousel-slide-to="4"></button>
                 </div>
                 <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                     <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -131,7 +103,375 @@
                     </span>
                 </button>
             </div>
-        </div>      
+        </div>
+       
+    
+        <div class="mx-auto">
+            <div class="border-b border-gray-200 dark:border-gray-700 my-4 mb-4">
+                <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                            id="profile-tab" data-tabs-target="#profile" type="button" role="tab"
+                            aria-controls="profile" aria-selected="false">Description</button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active"
+                            id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                            aria-controls="dashboard" aria-selected="true">Additional Information</button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                            id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                            aria-controls="settings" aria-selected="false">Reviews(0)</button>
+                    </li>
+                    <li role="presentation">
+                        <button
+                            class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                            id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
+                            aria-controls="contacts" aria-selected="false">Pricing Plans</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="myTabContent">
+                <div class="p-4 hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <p class="my-3">
+                        All our Deluxe rooms have big windows to help you take a broad view of the cityscape and nature.
+                        We offer bigger bed and every bathroom has bathtub and shower, which brings relaxation to you
+                        after a long day.
+                    </p>
+                    <p class="my-3">
+                        Fast WIFI connection, satelite TV and international standard electric socket are standard
+                        throughout Hotel. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p class="my-3">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
+                    </p>
+                </div>
+                <div class="p-4 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel"
+                    aria-labelledby="dashboard-tab">
+                    <ul class="pl-5 my-3 additionalInfo">
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Room Service</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Balcony / Terrace</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Bathroom Amenities</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Satellite TV</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Video/ DVD/ CD Player Available</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Coffee Table</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Hot / Cold Running Water</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Extra Bed, Towels, Bedding</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Toiletries</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Mineral Water</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Mirror</span>
+                        </li>
+                        <li class="text-hover my-3">
+                            <span class="text-black text-sm">Handheld Showers</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-4 rounded-lg hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <h1 class="uppercase text-2xl my-3">Reviews</h1>
+                    <p class="my-3">There are no reviews yet.</p>
+                    <h1 class="uppercase text-2xl my-3">
+                        Be the first to review “Single Room”
+                    </h1>
+                    <p class="font-bold text-sm">Your Rating</p>
+                    <div class="flex items-center space-x-1 my-3">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-row items-center my-10">
+                        <input type="checkbox" class="mr-2" style="height: 15px; width:15px;">
+                        <p class="text-sm">
+                            Save my name, email, and website in this browser for the next time I comment.
+                        </p>
+                    </div>
+                    <form class="pt-10 pb-20 border-bottom">
+                        <div class="flex flex-col lg:flex-row  w-full justify-between">
+                            <div class="flex flex-col w-full my-2 mx-1">
+                                <label class="font-bold text-sm tracking-wider">Name<span
+                                        class="text-red-700">*</span></label>
+                                <input type="text" placeholder="" class="text-border py-3 px-5 my-3">
+                            </div>
+                            <div class="flex flex-col w-full my-2 mx-1">
+                                <label class="font-bold text-sm tracking-wider">Email<span
+                                        class="text-red-700">*</span></label>
+                                <input type="text" placeholder="" class="text-border py-3 px-5 my-3">
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row w-full justify-between mx-1">
+                            <div class="flex flex-col w-full my-2">
+                                <label class="font-bold text-sm tracking-wider">Your Review</label>
+                                <textarea placeholder="" class="text-border py-3 px-5 my-3" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <button
+                                class="uppercase theme-bg-color text-white rounded-md text-xs font-bold mx-1 py-4 px-8">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="rounded-lg hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                    <h1 class="uppercase text-2xl my-7">Regular Plan</h1>
+                    <table class="table-auto my-5">
+                        <thead class="border-bottom">
+                            <tr class="w-full">
+                                <th class="w-[200px] text-center py-2">Mon</th>
+                                <th class="w-[200px] text-center py-2">Tue</th>
+                                <th class="w-[200px] text-center py-2">Wed</th>
+                                <th class="w-[200px] text-center py-2">Thu</th>
+                                <th class="w-[200px] text-center py-2">Fri</th>
+                                <th class="w-[200px] text-center py-2">Sat</th>
+                                <th class="w-[200px] text-center py-2">Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="w-[200px] text-center py-2">$64.9</td>
+                                <td class="w-[200px] text-center py-2">$64.9</td>
+                                <td class="w-[200px] text-center py-2">$64.9</td>
+                                <td class="w-[200px] text-center py-2">$64.9</td>
+                                <td class="w-[200px] text-center py-2">$64.9</td>
+                                <td class="w-[200px] text-center py-2">$71.5</td>
+                                <td class="w-[200px] text-center py-2">$71.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h1 class="uppercase text-2xl my-7">September 1, 2019 to September 2, 2019</h1>
+                    <table class="table-auto my-5">
+                        <thead class="border-bottom">
+                            <tr class="w-full">
+                                <th class="w-[200px] text-center py-2">Mon</th>
+                                <th class="w-[200px] text-center py-2">Tue</th>
+                                <th class="w-[200px] text-center py-2">Wed</th>
+                                <th class="w-[200px] text-center py-2">Thu</th>
+                                <th class="w-[200px] text-center py-2">Fri</th>
+                                <th class="w-[200px] text-center py-2">Sat</th>
+                                <th class="w-[200px] text-center py-2">Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$65.0</td>
+                                <td class="w-[200px] text-center py-2">$65.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h1 class="uppercase text-2xl my-7">August 26, 2019 to August 30, 2019</h1>
+                    <table class="table-auto my-5">
+                        <thead class="border-bottom">
+                            <tr class="w-full">
+                                <th class="w-[200px] text-center py-2">Mon</th>
+                                <th class="w-[200px] text-center py-2">Tue</th>
+                                <th class="w-[200px] text-center py-2">Wed</th>
+                                <th class="w-[200px] text-center py-2">Thu</th>
+                                <th class="w-[200px] text-center py-2">Fri</th>
+                                <th class="w-[200px] text-center py-2">Sat</th>
+                                <th class="w-[200px] text-center py-2">Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$59.0</td>
+                                <td class="w-[200px] text-center py-2">$65.0</td>
+                                <td class="w-[200px] text-center py-2">$65.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col border-top">
+            <h2 class="uppercase text-3xl my-10">Other Rooms</h2>
+            <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+                <div class="relative overflow-hidden rounded-lg w-auto roomsHeight">
+                    <div class="hidden duration-700 ease-in-out  bg-white" data-carousel-item="active">
+                        <div class="flex flex-row">
+                            <div class="flex flex-col lg:flex-row justify-between w-full">
+                                <div
+                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                                    <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center"
+                                        style="height:100%;">
+                                        <div class="w-full flex justify-center items-end backdrop-brightness-50"
+                                            style="height:200px;">
+                                            <span class="text-white text-2xl w-1/2 text-center mb-8">DOUBLE ROOM</span>
+                                        </div>
+                                    </div>
+                                    <h6 class="uppercase mt-7 flex items-center">From <span
+                                            class="text-4xl mx-2">$75.9</span> Night</h6>
+                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View
+                                        Detail <i class="fa fa-arrow-right"></i></p>
+                                </div>
+                                <div
+                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                                    <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center"
+                                        style="height:100%;">
+                                        <div class="w-full flex justify-center items-end backdrop-brightness-50"
+                                            style="height:200px;">
+                                            <span class="text-white text-2xl w-1/2 text-center mb-8">LUXURY ROOM</span>
+                                        </div>
+                                    </div>
+                                    <h6 class="uppercase mt-7 flex items-center">From <span
+                                            class="text-4xl mx-2">$64.9</span> Night</h6>
+                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View
+                                        Detail <i class="fa fa-arrow-right"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden duration-700 ease-in-out bg-white" style="height:550px" data-carousel-item>
+                        <div class="flex flex-row">
+                            <div class="flex flex-col lg:flex-row justify-between w-full">
+                                <div
+                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                                    <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center"
+                                        style="height:100%;">
+                                        <div class="w-full flex justify-center items-end backdrop-brightness-50"
+                                            style="height:200px;">
+                                            <span class="text-white text-2xl w-1/2 text-center mb-8">PREMIUM ROOM</span>
+                                        </div>
+                                    </div>
+                                    <h6 class="uppercase mt-7 flex items-center">From <span
+                                            class="text-4xl mx-2">$53.9</span> Night</h6>
+                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View
+                                        Detail <i class="fa fa-arrow-right"></i></p>
+                                </div>
+                                <div
+                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                                    <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center"
+                                        style="height:100%;">
+                                        <div class="w-full flex justify-center items-end backdrop-brightness-50"
+                                            style="height:200px;">
+                                            <span class="text-white text-2xl w-1/2 text-center mb-8">CLASSIC ROOM</span>
+                                        </div>
+                                    </div>
+                                    <h6 class="uppercase mt-7 flex items-center">From <span
+                                            class="text-4xl mx-2">$60.5</span> Night</h6>
+                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View
+                                        Detail <i class="fa fa-arrow-right"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden duration-700 ease-in-out bg-white" style="height:550px" data-carousel-item>
+                        <div class="flex flex-row">
+                            <div class="flex flex-col lg:flex-row justify-between w-full">
+                                <div
+                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                                    <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center"
+                                        style="height:100%;">
+                                        <div class="w-full flex justify-center items-end backdrop-brightness-50"
+                                            style="height:200px;">
+                                            <span class="text-white text-2xl w-1/2 text-center mb-8">CLASSIC ROOM</span>
+                                        </div>
+                                    </div>
+                                    <h6 class="uppercase mt-7 flex items-center">From <span
+                                            class="text-4xl mx-2">$60.5</span> Night</h6>
+                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View
+                                        Detail <i class="fa fa-arrow-right"></i></p>
+                                </div>
+                                <div
+                                    class="flex flex-col justify-center items-center lg:w-1/2 w-full bg-white box-shadow lg:mx-3">
+                                    <div class="w-full bg-[url('assets/room-02.jpg')] bg-cover bg-center"
+                                        style="height:100%;">
+                                        <div class="w-full flex justify-center items-end backdrop-brightness-50"
+                                            style="height:200px;">
+                                            <span class="text-white text-2xl w-1/2 text-center mb-8">BUDGET ROOM</span>
+                                        </div>
+                                    </div>
+                                    <h6 class="uppercase mt-7 flex items-center">From <span
+                                            class="text-4xl mx-2">$49.5</span> Night</h6>
+                                    <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color">View
+                                        Detail <i class="fa fa-arrow-right"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="true"
+                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false"
+                        aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full btn-hover" aria-current="false"
+                        aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+                <!-- <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button> -->
+            </div>
+        </div>
     </div>
     <div class="flex flex-col w-full sm:w-1/4 relative">
         <div class="flex flex-col p-10 w-full box-border">
@@ -172,8 +512,9 @@
                 </div>
             </div>
             <div class="flex flex-row w-full my-2">
-                <button class="uppercase theme-bg-color text-white rounded-md text-xs font-bold py-5 px-10">Check Availability</button>
-            </div>  
-        </div> 
+                <button class="uppercase theme-bg-color text-white rounded-md text-xs font-bold py-5 px-10">Check
+                    Availability</button>
+            </div>
+        </div>
     </div>
 </div>

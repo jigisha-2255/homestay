@@ -15,6 +15,7 @@ import { HotelBookingSearchComponent } from './hotel-booking-search/hotel-bookin
 import { SingleRoomComponent } from './single-room/single-room.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { NewsModule } from './news/news.module';
+import { HotelRoomsComponent } from './news/hotel-rooms/hotel-rooms.component';
 
 const routes: Routes = [
   {
@@ -81,6 +82,10 @@ const routes: Routes = [
   {
     path:'contact',
     component:ContactComponent
+  },
+  {
+    path:'hotelRooms',
+    component:HotelRoomsComponent
   }
 ];
 

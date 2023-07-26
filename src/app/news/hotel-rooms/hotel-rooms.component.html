@@ -1,0 +1,24 @@
+<div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:100%;">
+    <div class="w-full flex flex-col justify-center items-center backdrop-brightness-50" style="height:400px;">
+        <h1 class="uppercase text-white w-10/12 lg:text-6xl text-2xl my-2 text-center">Hotel Rooms</h1>
+        <h5 class="uppercase text-white text-sm my-2 tracking-widest">AMI HOMESTAY</h5>
+    </div>
+</div>
+
+<div class="flex flex-wrap">
+    <div class="flex flex-row my-20" style="overflow-x:hidden;">
+        <div class="flex flex-wrap lg:flex-row justify-between px-5 sm:px-20" style="width:100vw;" >
+            <div *ngFor="let room of rooms"
+                class="flex flex-col justify-center items-center lg:w-5/12 w-full box-shadow mx-3 my-4" style="width:48%;">
+                <div class="w-full bg-[url('assets/room-01.jpg')] bg-cover bg-center" style="height:500px;">
+                    <div class="w-full flex justify-center items-end backdrop-brightness-50" style="height:500px;">
+                        <span class="text-white text-2xl w-1/2 text-center mb-8 uppercase">{{room.name}}</span>
+                    </div>
+                </div>
+                <h6 class="uppercase mt-7 flex items-center">From <span class="text-4xl mx-2">{{room.price}}</span> Night</h6>
+                <p class="uppercase text-center text-xs font-bold px-5 mt-16 mb-10 theme-color" routerLink="../news/readMore">View Detail <i
+                        class="fa fa-arrow-right"></i></p>
+            </div>
+        </div>
+    </div>
+</div>
